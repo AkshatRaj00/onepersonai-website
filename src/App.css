@@ -1,38 +1,267 @@
+/* Basic Reset & Body Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a2e; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  line-height: 1.6;
+}
+
 .App {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header & Navigation */
+.App-header {
+  padding: 20px 0;
+  background-color: #16213e; /* Slightly lighter dark blue */
+  margin-bottom: 40px;
+  border-bottom: 1px solid #0f3460;
+}
+
+.App-header h1 {
+  color: #e0e0e0;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  background-color: #0f3460; /* Dark blue for sections */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: left; /* Text alignment within sections */
+}
+
+section h1, section h2, section h3, section h4 {
+  color: #e94560; /* Highlight color for headings */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section p {
+  margin-bottom: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Home Section Specifics */
+.home-section {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-section p {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 1.1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* CTA Buttons */
+.cta-buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1em;
+}
+
+.primary-btn {
+  background-color: #e94560;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.primary-btn:hover {
+  background-color: #b82d4c;
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.secondary-btn {
+  background-color: #0f3460;
+  color: #e94560;
+  border: 2px solid #e94560;
+}
+
+.secondary-btn:hover {
+  background-color: #e94560;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Grids for services and portfolio */
+.services-grid, .service-items-grid, .portfolio-items-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.service-items-grid, .portfolio-items-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.service-card, .service-item-card, .portfolio-item-card {
+  background-color: #16213e;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover, .service-item-card:hover, .portfolio-item-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3, .service-item-card h4 {
+  color: #e0e0e0;
+  font-size: 1.4em;
+  margin-top: 0;
+}
+
+.service-item-card .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #8c7ae6; /* A different highlight color for prices */
+  margin-top: 15px;
+}
+
+.portfolio-item-card a {
+  color: #8c7ae6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.portfolio-item-card a:hover {
+  text-decoration: underline;
+}
+
+/* About Us and Contact Page Specifics */
+.about-page-section p, .contact-page-section p {
+  text-align: left; /* Align text left within these sections */
+  margin-bottom: 20px;
+}
+.about-page-section strong {
+    color: #8c7ae6; /* Highlight for skills in About Us */
+}
+
+.connect-links h4, .direct-contact-info h4 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #e94560;
+}
+.connect-links p, .direct-contact-info p {
+    text-align: left;
+}
+.connect-links a, .direct-contact-info a {
+    color: #8c7ae6;
+    text-decoration: none;
+}
+.connect-links a:hover, .direct-contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #16213e;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+  background-color: #0f3460;
+  color: #e0e0e0;
+  font-size: 1em;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #e94560;
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.3);
+}
+
+
+.contact-form .btn.submit-btn {
+  width: 100%;
+  background-color: #e94560;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.contact-form .btn.submit-btn:hover {
+  background-color: #b82d4c;
+}
+
+/* Footer */
+.App-footer {
+  padding: 30px 20px;
+  margin-top: 50px;
+  background-color: #16213e;
+  color: #b0b0b0;
+  border-top: 1px solid #0f3460;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2em;
   }
-  to {
-    transform: rotate(360deg);
+  section {
+    padding: 40px 15px;
+  }
+  .services-grid, .service-items-grid, .portfolio-items-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
   }
 }
